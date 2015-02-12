@@ -1,16 +1,26 @@
 <template name="ballotList">
-    <div class="ballots">
-        {{#each ballots}}
-            {{> person}}
-        {{/each}}
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Current Ranking</h3>
+            <ul class="list-group">
+                {{#each ballots}}
+                    {{> person}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-4 pull-right" style="text-align:right">
+            <h3>Awards Awarded</h3>
+            {{> winnerList}}
+        </div>
     </div>
-    <div class="winner-div">
-        {{> winnerList}}
-    </div>
+
 </template>
 
 <template name="person">
     <div class="person">
-        {{name}}, {{points}}
+        <li class="list-group-item">
+            <span class="badge">{{points}}</span>
+            {{name}}
+        </li>
     </div>
 </template>
