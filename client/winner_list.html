@@ -1,0 +1,15 @@
+<template name="winnerList">
+    <div class="winners">
+        {{#each winners}}
+            {{> award}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="award">
+    <div class="award">
+        {{name}}
+        {{winner_title}}
+        {{subtext}}
+    </div>
+</template>

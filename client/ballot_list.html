@@ -1,0 +1,16 @@
+<template name="ballotList">
+    <div class="ballots">
+        {{#each ballots}}
+            {{> person}}
+        {{/each}}
+    </div>
+    <div class="winner-div">
+        {{> winnerList}}
+    </div>
+</template>
+
+<template name="person">
+    <div class="person">
+        {{name}}, {{points}}
+    </div>
+</template>
