@@ -1,15 +1,15 @@
 <template name="ballotNew">
     <h3>Make Your Bad Decisons Here!</h3>
-    {{#autoForm id="newForm" collection="Ballot"}}
+    {{#autoForm id="newForm" collection="Ballot" validation="none"}}
         {{> afQuickField name='name' placeholder='(your name)' options="auto"}}
         {{#each afFieldNames name="first"}}
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{labelFromThisNew}}</h3>
+                    <h3 class="panel-title">{{labelFromThis}}</h3>
                 </div>
                 <div class="panel-body">
                     {{> afQuickField name=this label="1st Choice (10 points)" options="auto"}}
-                    {{> afQuickField name=secondTagNew label="2nd Choice (5 points)" options="auto"}}
+                    {{> afQuickField name=secondTag label="2nd Choice (5 points)" options="auto"}}
                 </div>
             </div>
         {{/each}}
@@ -20,15 +20,6 @@
 </template>
 
 <template name="ballotEdit">
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#ok").affix({
-                offset: {
-                    top: 0
-                }
-            });
-        });
-    </script>
     <h4>^^ Save that URL ^^<br />You can come back here and edit your choice later.</h4>
     <h5>I suppose you can email me if you lose it... ಠ_ಠ</h5>
     <h3>Edit Your Bad Decisions Here!</h3>
