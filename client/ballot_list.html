@@ -9,7 +9,6 @@
             </ul>
         </div>
         <div class="col-md-4 pull-right" style="text-align:right">
-            <h3>Awards Awarded</h3>
             {{> winnerList}}
         </div>
     </div>
@@ -17,10 +16,8 @@
 </template>
 
 <template name="person">
-    <div class="person">
-        <li class="list-group-item">
-            <span class="badge">{{points}}</span>
-            {{name}}
-        </li>
-    </div>
+    <li class="list-group-item">
+        <span class="badge">{{points}}</span>
+        {{name}}
+    </li>
 </template>

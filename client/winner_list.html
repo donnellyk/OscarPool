@@ -1,7 +1,7 @@
 <template name="winnerList">
-    <div class="winners">
-        <h3>Current Ranking</h3>
-        {{#each winners}}
+    <h3>Awards</h3>
+    <div class="well">
+        {{#each winnerKeys}}
             {{> award}}
         {{/each}}
     </div>
@@ -9,8 +9,6 @@
 
 <template name="award">
     <div class="award">
-        {{name}}
-        {{winner_title}}
-        {{subtext}}
+        <p><span style="color:gray; font-style: italic">{{categoryString}}</span><br />{{categoryWinnerString}}</p>
     </div>
 </template>

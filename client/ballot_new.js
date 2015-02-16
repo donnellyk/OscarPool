@@ -33,13 +33,5 @@ AutoForm.hooks({
             this.done();
             return false;
         }
-    },
-    editForm: {
-        after: {
-            update: function(error, result, template) {
-                $("#save-glyph").show(200).delay(500).hide(500);
-            }
-
-        }
     }
 });
