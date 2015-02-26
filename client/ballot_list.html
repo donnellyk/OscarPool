@@ -17,7 +17,12 @@
 
 <template name="person">
     <li class="list-group-item">
+        <a id={{elementID}} tabindex="0" class="popover_link" rel="popover" style="cursor:pointer">{{name}}</a>
         <span class="badge">{{points}}</span>
-        {{name}}
     </li>
+    <div id={{_id}} class="hide">
+        {{#each ballotKeys}}
+            <p><span style="color:gray; font-style: italic">{{categoryString}}</span><br />{{{categorySelectionFirstString}}}<br />{{{categorySelectionSecondString}}}</p>
+        {{/each}}
+     </div>
 </template>
